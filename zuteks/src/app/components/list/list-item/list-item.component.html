@@ -1,0 +1,13 @@
+<div class="products">
+    <div class="pictures">
+        <div><img [src]="product.image1"></div>
+        <div><img [src]="product.image2"></div>
+    </div>
+    <div class="options">
+        <h2>{{product.name}}</h2>
+        <h5>{{product.price}}.00 BAM</h5>
+        <p>{{product.description}}</p>
+        <button  *ngIf="product.soldInd !='1'" (click)="addProductToBasket(product)" class="basket">Add to bag</button>
+        <button  *ngIf="product.soldInd !='1'" (click)="removeFromWishlist(product)" class="love-it"><i class="fa fa-heart" aria-hidden="true"></i></button>
+    </div>
+</div>

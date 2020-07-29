@@ -1,0 +1,67 @@
+<div class="main"></div>
+<div class="wrapper">
+    <div class="adding-area">
+        <h5>Add new Product</h5>
+        <div class="inputs">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                </div>
+                <input [(ngModel)]="product.name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Price</span>
+                </div>
+                <input [(ngModel)]="product.price" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+                </div>
+                <input [(ngModel)]="product.description" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Category</label>
+                <select class="form-control" type="text" [(ngModel)]="product.product_category_id">
+                    <option value=""></option>
+                  <option *ngFor="let category of categories" [value]="category.id" [selected] ="true">{{category.name}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Subcategory</label>
+                <select class="form-control" [(ngModel)]="product.product_subcategory_id">
+                    <option value=""></option>
+                    <option *ngFor="let subcategory of subcategories" [value]="subcategory.id" [selected] ="true">{{subcategory.name}}</option>
+                </select>
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">First image</span>
+                </div>
+                <input [(ngModel)]="product.image1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Second image</span>
+                </div>
+                <input [(ngModel)]="product.image2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Third image</span>
+                </div>
+                <input [(ngModel)]="product.image3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Fourth image</span>
+                </div>
+                <input [(ngModel)]="product.image4" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <button (click)="addNewProduct(product)" type="button" class="btn btn-success">Add</button>
+              <button (click)="removeProduct(product)" type="button" class="btn btn-secondary">Clear</button>
+        </div>
+        
+    </div>
+</div>

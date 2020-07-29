@@ -1,0 +1,72 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 30px;
+    font-family: 'Poppins' ;
+
+    .pictures {
+        grid-column: 2 span;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+
+        img {
+            padding: 10px;
+            width: 100%;
+        }
+    }
+
+    .options {
+        padding: 50px;
+        
+
+        .back {
+            background-color: transparent;
+            border:none;
+            outline: none;
+            color: gray;
+            margin-top:20px;
+
+            &:hover {
+                color: rgb(187, 187, 187);
+            }
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        .category{
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .basket {
+            background-color: rgb(78, 78, 248);
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            margin: 5px;
+            padding: 10px;
+            color: white;
+            width: 60%;
+        }
+
+        .love-it {
+            background-color: transparent;
+            border-radius: 50px;
+            outline: none;
+            border: none;
+            margin: 5px;
+            padding: 10px;
+            font-size: 24px;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}

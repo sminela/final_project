@@ -1,0 +1,14 @@
+<div class="project-preview">
+    <div class="main" style="background-image: url('{{project.first_image}}');"></div>
+    <div class="intro">
+        <h1>{{project.name}}, {{project.city}}</h1>
+        <p>{{project.description}}</p>
+    </div>
+    <div class="images">
+        <div><img [src]="project.first_image"></div>
+        <div><img [src]="project.second_image"></div>
+        <div><img [src]="project.third_image"></div>
+        <div><img [src]="project.fourth_image"></div>
+    </div>
+    <div class="last-image"><div class="container"><img [src]="project.fifth_image"></div></div>
+</div>

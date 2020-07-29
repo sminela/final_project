@@ -1,0 +1,88 @@
+<div class="main"></div>
+<div class="wrapper">
+    <div class="about">
+        <img src="assets/images/admin.png"><br>
+        <span class="name">{{userService.loggedUser.firstname}} </span><span class="name">{{userService.loggedUser.lastname}}</span>
+        <p><b>Username: </b>{{userService.loggedUser?.username}}</p>
+        <button (click)="logout()" type="button" class="btn btn-danger">Logout</button>
+    </div>
+    <div class="body">
+        <h4>Dashboard</h4>
+        <div class="cards">
+            <div class="card"><div id="cart"><img src="assets/images/cart.png"></div><div class="numbers"><span>SALES</span><p>{{ordersNo}}</p></div></div>
+            <div class="card" ><div id="users"><img src="assets/images/users.png"></div><div class="numbers"><span>USERS</span><p>{{usersNo}}</p></div></div>
+            <div class="card"><div id="projects"><img src="assets/images/projects.png"></div><div class="numbers"><span>PROJECTS</span><p>{{projectsNo}}</p></div></div>
+        </div>
+        <div class="table">
+                <table class="table">
+                    <caption>List of users</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Lastname</th>
+                        <th scope="col">Email address</th>
+                        <th scope="col">Home address</th>
+                        <th scope="col">Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let user of allUsers" >
+                        <th  scope="row">{{user.id}}</th>
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.address}} {{user.city}} {{user.country}}</td>
+                        <td>{{user.username}}</td>
+                        <td><button (click)="removeUser(user)" type="button" class="btn btn-danger">BLOCK</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="table">
+                <caption>List of projects</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Description</th>
+                    <th (click)="addNewProject()" scope="col"><button type="button" class="btn btn-success">Add new</button></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let project of allProjects" >
+                    <th  scope="row">{{project.id}}</th>
+                    <td>{{project.name}}</td>
+                    <td>{{project.city}}</td>
+                    <td>{{project.description}}</td>
+                    <td><button (click)="removeProject(project)" type="button" class="btn btn-danger">REMOVE</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>List of products</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Subcategory</th>
+                    <th (click)="addNewProduct()" scope="col"><button type="button" class="btn btn-success">Add new</button></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of allProducts" >
+                    <th  scope="row">{{product.id}}</th>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}.00BAM</td>
+                    <td>{{product.categoryName}}</td>
+                    <td>{{product.subcategoryName}}</td>
+                    <td><button (click)="removeProduct(product)" type="button" class="btn btn-danger">REMOVE</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

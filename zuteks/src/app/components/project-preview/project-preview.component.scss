@@ -1,0 +1,54 @@
+.main {
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+}
+
+.intro {
+    width: 100%;
+    padding-top: 55px;
+    margin: auto;
+    width: 30%;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #231f20;
+        line-height: 24px;
+        text-align: center;
+        font-family: 'Poppins' ;
+    }
+}
+
+.images {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: auto;
+
+    img {
+        height: 50vh;
+        width: 100%;
+       padding: 5px;
+    }
+}
+
+.last-image {
+   margin: 5px;
+    height: 60vh;
+
+    .container {
+        width: 25%;
+        height: 100%;
+        margin: auto;
+        img {
+            height: 100%;
+        }
+    }
+
+   
+}

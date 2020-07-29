@@ -1,0 +1,37 @@
+<div class="main">
+</div>
+<div  *ngIf="!selectedProject" class="intro">
+    <p>
+        Founded in BiH in 1996, furniture company Zuteks has become known for its contribution to 20th century industrial design. 
+        Today, we shed a new light on these iconic designs. 
+        We value simplicity and believe that details make all the difference.
+    </p>
+</div>
+<h4  *ngIf="!selectedProject" class="lineTitle">Projects</h4>
+<div  *ngIf="!selectedProject" class="project-table">
+    <div *ngFor="let project of projects" 
+    [ngClass]="{'project-gray': (project.id%2 == 0 && project.id%3 !=0), 'project-beige': (project.id%2 != 0 && project.id%3!=0), 'project-green': (project.id%3 == 0), 'left-floated': project.id%2 == 0, 'right-floated': project.id%2 != 0}">
+        <div class="description">
+            <h3>{{project.name}}, {{project.city}}</h3>
+            <p>{{project.short_description}}</p>
+            <p class="readMore" (click)="showMore(project)">READ MORE</p>
+           </div>
+        <div class="image readMore"  (click)="showMore(project)" style="background-image: url('{{project.first_image}}');"></div>
+    </div>
+</div>
+
+<div  *ngIf="!selectedProject" class="products">
+    <h4 class="lineTitle">Products</h4>
+    <div class="productTable">
+        <div class="productTableRow">
+            <div class="furniture firstConteiner"><span class="productTitle">Furniture</span></div>
+            <div class="furniture secondConteiner"><span class="productTitle">Curtains</span></div>
+        
+            <div class="furniture thirdConteiner"><span class="productTitle">bed sheets</span></div>
+            <div class="furniture fourthConteiner"><span class="productTitle">tablecloths</span></div>
+        </div>
+    </div>
+</div>
+
+<app-project-preview [project]="selectedProject" *ngIf="selectedProject"></app-project-preview>
+<app-footer></app-footer>

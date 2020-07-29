@@ -1,0 +1,19 @@
+<div class="main"></div>
+<div class="order-wrapper">
+<div class="order" *ngFor="let product of allProducts">
+    <div class="products">
+        <div class="pictures">
+            <div><img [src]="product.image1"></div>
+            <div><img [src]="product.image2"></div>
+        </div>
+        <div class="options">
+            <h2>{{product.name}}</h2>
+            <h4>{{product.price}}.00 BAM</h4>
+            <p>{{product.description}}</p>
+            <button (click)="saveOrder(product)" class="basket">Buy</button>
+            <button (click)="removeFromBasket(product)" type="button" class="btn btn-danger">Remove</button>
+        </div>
+    </div>
+
+
+

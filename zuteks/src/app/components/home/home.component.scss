@@ -1,0 +1,209 @@
+.main {
+    background-image: url("/assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+}
+
+.intro {
+    width: 100%;
+    padding-top: 55px;
+    margin: auto;
+    width: 30%;
+
+    p {
+        font-size: 14px;
+        color: #231f20;
+        line-height: 24px;
+        text-align: center;
+        font-family: 'Poppins' ;
+    }
+}
+.lineTitle {
+    font-size: 22px;
+    color: #b08f6e;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.project-table {
+    margin: 50px 0;
+
+    overflow: hidden;
+
+    .project-green {
+        margin: 0vh 15vh;
+        height: 50vh;
+        overflow: hidden;
+    
+        .description {
+           width: 40%;
+            background-color: #232c27;
+            padding: 30px;
+            color: white; 
+            height: 50vh;    
+            font-family: 'Poppins' ;      
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+                font-size: 14px;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .readMore {
+            cursor: pointer;
+        }
+    }
+    
+    .project-beige {
+        margin: 0vh 15vh;
+        height: 50vh;
+        overflow: hidden;
+    
+        .description {
+           width: 40%;
+            padding: 30px;
+            color: white;
+            background-color:  #b08f6e;
+            height: 50vh;
+            font-family: 'Poppins' ;
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .readMore {
+            cursor: pointer;
+        }
+    }
+    
+    .project-gray {
+        margin: 0vh 15vh;
+        background-color:  #b0b6b3;
+        overflow: hidden;
+    
+        .description {
+            width: 40%;
+            padding: 30px;
+            color: white;
+            height: 50vh;
+            font-family: 'Poppins' ;
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .readMore {
+            cursor: pointer;
+        }
+    }
+
+    .left-floated {
+        .description {
+            float: left;
+        }
+
+        .image {
+            float: right;
+        }
+    }
+
+    .right-floated {
+        .description {
+            float: right;
+        }
+
+        .image {
+            float: left;
+        }
+    }
+
+}
+.productTable {
+    padding: 50px;
+}
+
+.productTableRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.furniture {
+    margin: 20px;
+    width: 25%;
+    background-color: darkgray;
+    height: 500px;
+    position: relative;
+    -webkit-box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.64);
+    -moz-box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.64);
+    box-shadow: 10px 10px 32px -15px rgba(0,0,0,0.64);
+}
+
+.firstConteiner {
+    background-image: url('/assets/images/furnitureOne.jpg');
+    background-position: center;
+}
+
+.secondConteiner {
+    background-image: url('/assets/images/furnitureTwo.jpg');
+    background-position: center;
+}
+
+.thirdConteiner {
+    background-image: url('/assets/images/furnitureThree.jpg');
+    background-position: center;
+}
+
+.fourthConteiner {
+    background-image: url('/assets/images/furnitureFour.jpg');
+    background-position: center;
+}
+
+.productTitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fcfcfca9;
+    display: inline-block;
+    padding: 0 35px;
+    font-size: 16px;
+    color: #4c4e56;
+    letter-spacing: 2px;
+    line-height: 48px;
+    text-transform: uppercase;
+}

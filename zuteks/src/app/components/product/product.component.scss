@@ -1,0 +1,54 @@
+.main {
+    height: 20vh;
+}
+
+.filter-wrapper {
+    margin-left: 10vh;
+    font-family: 'Poppins' ;
+    float: left;
+    width: 20%;
+
+    .category {
+        margin: 17px;
+        margin-bottom: 30px;
+
+        h4 {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+
+    .subcategory {
+        margin: 17px;
+        margin-bottom: 30px;
+
+        h4 {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+
+    .price {
+        .input-price {
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+
+    button {
+        margin-left: 17px;
+    }
+}
+.wrapper {
+    overflow: hidden;
+    width: 70%;
+    float: right;
+
+    .product {
+        float: left;
+        width: 30%;
+    }
+}

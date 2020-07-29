@@ -1,0 +1,30 @@
+<div *ngIf="!selectedProject">
+    <div class="main"></div>
+
+<div class="intro">
+    <h1>Luxury Interior Design Projects</h1>
+    <p>
+        The experienced team at zuteks, specialise in conceiving, designing and constructing exceptional homes within the 
+        esteemed prime locations of Mayfair, Chelsea, Knightsbridge and Holland Park. 
+        In addition, their exclusive client list and extensive portfolio of work has encompassed 
+        international luxury interior design projects in New York, Dubai and Shanghai. 
+        Recent projects include a heritage apartment in Knightsbridge, a penthouse in Dubai and a 
+        country estate in Surrey.
+    </p>
+</div>
+<div class="project-table">
+    <div *ngFor="let project of projects" 
+    [ngClass]="{'project-green': project.id%2 == 0, 'project-beige': (project.id%2 != 0 && project.id%3!=0), 'project-gray': (project.id%3 == 0 && project.id%2 != 0), 'left-floated': project.id%2 == 0, 'right-floated': project.id%2 != 0}">
+        <div class="description">
+            <h3>{{project.name}}, {{project.city}}</h3>
+            <p>{{project.short_description}}</p>
+            <span class="more-info" (click)="showMore(project)">READ MORE</span>
+           </div>
+        <div class="image" style="background-image: url('{{project.first_image}}');"></div>
+    </div>
+</div>
+</div>
+
+<app-project-preview [project]="selectedProject" *ngIf="selectedProject"></app-project-preview>
+
+<app-footer></app-footer>

@@ -1,0 +1,91 @@
+.wrapper {
+    
+    height: 100vh;
+    
+
+    .login-wrapper {
+        background-color:#305c51;
+        width: 30%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+    
+        .login-img {
+            margin:40px auto;
+            width: 60px;
+        }
+    
+        .login-info {
+            margin: 0px 40px 20px;
+
+            .userinfo {
+                margin: 0 30px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid  rgb(221, 221, 221);
+            }
+
+            i {
+                margin-top: 30px;
+                color: rgb(221, 221, 221);
+                margin-right: 20px;
+            }
+    
+            input {
+                border: none;
+                outline: none;
+                margin: 0px;
+                margin-top: 20px;
+                margin-right: 10px;
+                padding: 5px;
+                height: 30px;
+                width: 100%;
+                background-color: #305c51 ;
+                margin-bottom: 1px;
+                color: rgb(221, 221, 221);
+            }
+    
+            .button {
+                width: 60%;
+                margin: auto;
+                margin-bottom: 80px;
+    
+                button {
+                    background-color: white;
+                    border-radius: 30px;
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    margin-top: 50px;
+                    color: #305c51;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        hr {
+          background-color: rgb(221, 221, 221);
+        }
+    
+        .signup {
+            margin: 0 40px;
+
+            p {
+                color: rgb(221, 221, 221);
+                text-align: center;
+                font-size: 14px;
+    
+                span {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+            }
+        }
+       
+    }
+}
+

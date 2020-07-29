@@ -1,0 +1,127 @@
+<div class="main"></div>
+<div *ngIf="!selectedProduct" class="filter-wrapper">
+    <div class="category">
+        <h4>Category</h4>
+        <div class="form-check">
+                <input [(ngModel)]="searchProduct.category1" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                   Furniture
+                </label>            
+        </div>
+         <div class="form-check">
+                <input [(ngModel)]="searchProduct.category2" class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                <label class="form-check-label" for="defaultCheck2">
+                   Window treatment
+                </label>            
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.category3" class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3">
+              Bedding
+            </label>            
+    </div>
+    <div class="form-check">
+        <input [(ngModel)]="searchProduct.category4" class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+        <label class="form-check-label" for="defaultCheck4">
+           Tablecloth
+        </label>            
+</div>
+    </div>
+    <div class="subcategory">
+        <h4>Subcategory</h4>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory1" class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+            <label class="form-check-label" for="defaultCheck5">
+                Sofas and armchairs
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory2" class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+            <label class="form-check-label" for="defaultCheck6">
+                Beds
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory3" class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+            <label class="form-check-label" for="defaultCheck7">
+               Dressers and storage drawers
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory4" class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+            <label class="form-check-label" for="defaultCheck8">
+                Tables
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory5" class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+            <label class="form-check-label" for="defaultCheck9">
+                Chairs
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory6" class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+            <label class="form-check-label" for="defaultCheck10">
+                Curtains
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory7" class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+            <label class="form-check-label" for="defaultCheck11">
+                Panel curtains
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory8" class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+            <label class="form-check-label" for="defaultCheck12">
+                Bedlinen
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory9" class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+            <label class="form-check-label" for="defaultCheck13">
+               Bedspreads
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory10" class="form-check-input" type="checkbox" value="" id="defaultCheck14">
+            <label class="form-check-label" for="defaultCheck14">
+                Blankets and throws
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory11" class="form-check-input" type="checkbox" value="" id="defaultCheck15">
+            <label class="form-check-label" for="defaultCheck15">
+                Tablecloths
+            </label>
+        </div>
+        <div class="form-check">
+            <input [(ngModel)]="searchProduct.subcategory12" class="form-check-input" type="checkbox" value="" id="defaultCheck16">
+            <label class="form-check-label" for="defaultCheck16">
+                Table towels
+            </label>
+        </div>
+    </div>
+    <div class="price">
+        <div class="form-group col-md-10">
+            <h4>Price</h4>
+            <input [(ngModel)]="searchProduct.priceFrom" class="form-control form-control-sm input-price" type="text" placeholder="From">
+            <input [(ngModel)]="searchProduct.priceTo" class="form-control form-control-sm input-price" type="text" placeholder="To"> 
+        </div>
+    </div>
+    <button (click)="searchProducts()" type="button" class="btn btn-info">Search</button>
+    <button (click)="clearSearchForm()" type="button" class="btn btn-secondary">Refresh</button>
+</div>
+<div class="wrapper" *ngIf="!selectedProduct">
+    <product-item class="product" *ngFor="let item of products" [product]="item"
+    (showMoreEmit)="showMore($event)"
+    (productAddToBasket)="addProductToBasket($event)"
+    (productAddToWishlist)="addProductToWishlist($event)"
+    (productRemoveFromWishlist)="removeFromWishlist($event)"
+    ></product-item>
+</div>
+<div>
+    <app-product-preview *ngIf="selectedProduct" [product]="selectedProduct"
+    (backToProductsEmit)="selectedProduct=null"></app-product-preview>
+</div>
+

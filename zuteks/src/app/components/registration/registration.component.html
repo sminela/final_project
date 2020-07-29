@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="signup-wrapper">
+        <div class="signup-img">
+            <img src="/assets/images/fingerprint.png">
+        </div>
+        <div class="signup-info">
+            <!--i class="fa fa-user" aria-hidden="true"></i-->
+            <input [(ngModel)]="user.firstname" type="text" placeholder="Your name*">
+            <input [(ngModel)]="user.lastname" type="text" placeholder="Your last name">
+            <input [(ngModel)]="user.email" type="text" placeholder="E-mail address">
+            <input [(ngModel)]="user.address" type="text" placeholder="Your address">
+            <input [(ngModel)]="user.username" type="text" placeholder="Username*">
+            <!--i class="fa fa-key" aria-hidden="true"></i-->
+            <input (keyup.enter)="saveUser()" [(ngModel)]="user.password" type="password" placeholder="Password*">
+            <div class="button">
+                <button (click)="saveUser()">Sign up</button>
+            </div>
+        </div>
+        <div class="terms">
+            <p>By creating an account, you agree and accept our Terms and Privacy Policy</p>
+            <p>*required fields</p>
+        </div>
+        <hr>
+        <div class="login">
+            <p>Already have an account?  <span (click)="backToLogin()">Log in.</span></p>
+            
+        </div>
+    </div>
+</div>

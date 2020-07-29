@@ -1,0 +1,165 @@
+.main {
+    background-image: url("/assets/images/projectbcg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+}
+
+.intro {
+    width: 100%;
+    padding-top: 55px;
+    margin: auto;
+    width: 30%;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #231f20;
+        line-height: 24px;
+        text-align: center;
+        font-family: 'Poppins' ;
+    }
+}
+
+.project-table {
+    margin: 50px 0;
+
+    overflow: hidden;
+
+    .project-green {
+        margin: 0vh 15vh;
+        height: 50vh;
+        overflow: hidden;
+    
+        .description {
+           width: 40%;
+            background-color: #232c27;
+            padding: 30px;
+            color: white; 
+            height: 50vh;        
+            font-size: 14px;  
+            line-height: 24px;
+            font-family: 'Poppins' ;
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+            }
+
+            .more-info {
+                cursor: pointer;
+                margin: 20px;
+                text-decoration: underline;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+    }
+    
+    .project-beige {
+        margin: 0vh 15vh;
+        height: 50vh;
+        overflow: hidden;
+    
+        .description {
+           width: 40%;
+            padding: 30px;
+            color: white;
+            background-color:  #b08f6e;
+            height: 50vh;
+             font-size: 14px;  
+            line-height: 24px;
+            font-family: 'Poppins' ;
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+            }
+            .more-info {
+                cursor: pointer;
+                margin: 20px;
+                text-decoration: underline;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+    }
+    
+    .project-gray {
+        margin: 0vh 15vh;
+        background-color:  #b0b6b3;
+        overflow: hidden;
+    
+        .description {
+            width: 40%;
+            padding: 30px;
+            color: white;
+            height: 50vh;
+             font-size: 14px;  
+            line-height: 24px;
+            font-family: 'Poppins' ;
+    
+            h3{
+                margin: 20px;
+            }
+    
+            p {
+                margin: 20px;
+            }
+            .more-info {
+                cursor: pointer;
+                margin: 20px;
+                text-decoration: underline;
+            }
+        }
+    
+        .image {
+            width: 60%;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+    }
+
+    .left-floated {
+        .description {
+            float: left;
+        }
+
+        .image {
+            float: right;
+        }
+    }
+
+    .right-floated {
+        .description {
+            float: right;
+        }
+
+        .image {
+            float: left;
+        }
+    }
+
+}
+

@@ -1,0 +1,30 @@
+<div class="wrapper">
+    
+    <div class="login-wrapper">
+        <div class="login-img">
+            <img src="/assets/images/fingerprint.png">
+            <!--h2>Log in</h2-->
+        </div>
+        <div class="login-info">
+            <div class="userinfo">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input [(ngModel)]="user.username" type="text" placeholder="Username">
+            </div>
+            <div class="userinfo">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input (keyup.enter)="login()" [(ngModel)]="user.password" type="password" placeholder="Password">
+            </div>
+            
+            <div class="button">
+                <button (click)="login()">Log in</button>
+            </div>
+        </div>
+        <hr>
+        <div class="signup">
+            <p>Don't have an account? <span (click)="signUp()">REGISTER HERE</span></p> 
+        </div>
+    </div>
+</div>
+
+
+

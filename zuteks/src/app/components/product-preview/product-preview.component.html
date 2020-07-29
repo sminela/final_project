@@ -1,0 +1,21 @@
+<div class="products">
+    <div class="pictures">
+        <div><img [src]="product.image1"></div>
+        <div><img [src]="product.image2"></div>
+    </div>
+    
+    <div class="options">
+        <h2>{{product.name}}</h2>
+        <h4>{{product.price}}.00 BAM</h4>
+        <p class="category">{{product.subcategoryName}}, {{product.categoryName}}</p>
+        <p>{{product.description}}</p>
+        <button *ngIf="product.soldInd !='1'" (click)="addProductToBasket(product)" class="basket">Add to bag</button>
+        <button *ngIf="product.soldInd !='1'" (click)="addProductToWishlist(product)" class="love-it"><i class="fa fa-heart-o" aria-hidden="true"></i></button><br>
+        <button class="back" (click)="backToProducts()">BACK TO PRODUCTS</button>
+    </div>
+
+    <div class="pictures">
+        <div><img [src]="product.image3"></div>
+        <div><img [src]="product.image4"></div>
+    </div>
+</div>

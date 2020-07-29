@@ -1,0 +1,8 @@
+<div class="main"></div>
+<div class="wrapper">
+    <list-item class="product" *ngFor="let item of allProducts" [product]="item"
+    (productAddToBasket)="addProductToBasket($event)"
+    (productRemoveFromWishlist)="removeFromWishlist($event)"
+    ></list-item>
+</div>
+

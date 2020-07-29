@@ -1,0 +1,30 @@
+
+<div class="main"></div>
+
+<div class="info-wrapper">
+    <img src="assets/images/user.jpg">
+    <div class="about">
+        
+        <span class="name">{{userService.loggedUser.firstname}} </span><span class="name">{{userService.loggedUser.lastname}}</span>
+        <p><b>Email address: </b>{{userService.loggedUser.email}}</p>
+        <span><b>Home address: </b>{{userService.loggedUser.address}} </span><span> {{userService.loggedUser.city}} </span> <span>{{userService.loggedUser.country}}</span>
+        <p><b>Username: </b>{{userService.loggedUser?.username}}</p>
+        <button (click)="logout()" type="button" class="btn btn-danger">Logout</button>
+    </div>
+   
+</div>
+<hr>
+<div class="order-wrapper">
+    <h5><i class="fa fa-list-alt" aria-hidden="true"></i> Ordered products:</h5>
+    <div class="order" *ngFor="let product of products">
+        <div class="card" style="width: 18rem;">
+            <img src="{{product.image2}}">
+            <div class="card-body">
+                <p class="card-text"><b>{{product.name}}</b></p>
+              <p class="card-text">{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
